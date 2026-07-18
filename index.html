@@ -40,7 +40,7 @@
         </div>
         <aside class="hero-panel" aria-label="Coach highlights">
           <div class="stat-card">
-            <strong>5+ Years</strong>
+            <strong id="experience-years"></strong>
             <span>Experience</span>
           </div>
           <div class="stat-card">
@@ -105,5 +105,13 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const startYear = 2021;
+      const currentYear = new Date().getFullYear();
+      const years = Math.max(5, currentYear - startYear);
+      document.getElementById('experience-years').textContent = years + '+ Years';
+    });
+  </script>
 </body>
 </html>
